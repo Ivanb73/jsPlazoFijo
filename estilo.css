@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #000;
+}
+
+#gradient {
+    width: 100%;
+    height: 800px;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    height: bold;
+    font-size: 3rem;
+    margin: 3% 3%;
+}
+h3{
+    margin-left: 5px;
+    margin:2% 2%;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+div{
+    margin: 1%;
+    font-size: 20px;
+    height: 80px;
+    
+}
+label{
+    align-items: center;
+}
+span{
+    font-size: .9rem;
+    display: inline-block;
+}
+#bajarTexto{
+    position: relative;
+    top: 7px;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.capital{
+    margin-top: 10%;
+}
+form{
+    background-color: #F2A03D;
+    width: 50%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+/* contenedordel formulario */
+input{
+    height: 40%;
+    position: relative;
+    left: auto;
+    font-size: 1rem;
+}
+.btn{
+    font-size: 1.5rem;
+    background-color:#fff;
+    margin: 5px;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/* contenedor que contiene el boton calcular y limpiar */
+.boton{
+    margin-right: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido{
+    display: none;
+}
+.resultado{
+    background-color: aliceblue;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resultado td{
+    padding: 10px;
+    border-bottom: 2px solid #D9593D;
+    border-collapse: collapse;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.resultado table{
+    border-collapse: collapse;
+    width: 70%;
+}
+.regresar{
+    padding: 5px;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.contenido{
+    display: block;
+}
+
+/* tabla de resultados creados en el DOM */
+#tabla{
+    opacity: 0.8;
+}
+
+/* darkMode */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label#darkmode {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: #919094;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label#darkmode:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label#darkmode {
+	background: var(--color-headings);
+}
+
+input:checked + label#darkmode:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label#darkmode:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/* changeMoney */
+
+.currency {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.currency select {
+	background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right .2em top 50%, 0 0;
+    background-size: .50em auto, 100%;
+	border: 0;
+	padding-right: 20px;
+	font-size: 22px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.currency input {
+	border: 0;
+	background: transparent;
+	font-size: 22px;
+	text-align: right;
+}
+
+.middle {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.middle button {
+	background-color: #fff;
+	border: 2px solid #D9593D;
+	border-radius: 50%;
+	cursor: pointer;
+	color: #D9593D;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 30px;
+	transform: rotate(90deg);
+}
+
+.middle button:active {
+	transform: rotate(90deg) scale(0.9);
+}
+
+.middle .rate {
+	background-color: #fff;
+	border: 2px solid #ecf0f1;
+	border-radius: 50px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	padding: 0 10px;
+	margin: 30px 15px 30px 25px;
+}
+
+select:focus, input:focus, button:focus {
+	outline: 0;
+}
